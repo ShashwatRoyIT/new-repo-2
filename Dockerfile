@@ -26,7 +26,7 @@ COPY package*.json ./
 RUN npm ci --only=production
 
 # Copy local code to the container image.
-COPY . ./backend
+COPY . ./
 
 # Run the web service on container startup.
 ENTRYPOINT [ "node", "index.js" ]
